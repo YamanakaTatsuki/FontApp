@@ -2,6 +2,7 @@ import React,{useState}from 'react';
 import { makeStyles, withTheme } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
 import FontSize from './FontSize';
+import Align from './align';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -9,6 +10,7 @@ const useStyles = makeStyles((theme) => ({
     '& .MuiTextField-root': {
       margin: theme.spacing(6),
       width: '70ch',
+      flexGrow: 1
     },
   },
 }));
@@ -26,6 +28,8 @@ export default function MuiTextField(props) {
 
   const [color,setColor] = useState('black');
 
+  const [align,setAlign] = useState('left');
+
   return (
     <form className={classes.root} noValidate autoComplete="off">
       <div>
@@ -36,11 +40,12 @@ export default function MuiTextField(props) {
           rows={40}
           variant="outlined"
           label ="文字を入力してください"
-          inputProps={{style: {fontSize:count,color:color}}}
+          inputProps={{style: {fontSize:count,color:color,textAlign:align}}}
           InputLabelProps={{style: {fontSize: count}}}
-
+          
           />
         <FontSize setCount={setCount} setColor={setColor}/>
+        <Align setAlign={setAlign}/>
       </div>
     </form>
        );

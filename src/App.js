@@ -1,6 +1,5 @@
 import React from 'react';
-import MuiTextField from './input';
-import FontSize from './FontSize';
+import MuiTextField from './components/Body components/input';
 
 
 const App=(props)=>{
