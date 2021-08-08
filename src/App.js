@@ -1,12 +1,13 @@
 import React from 'react';
-import MuiTextField from './components/Body components/input';
-
+import Body from './components/Body components/body';
+import ButtonAppBar from '/Users/yamanakatatsuki/FontApp/src/components/Headercomponets/Header.js';
 
 const App=(props)=>{
 
     return(
         <div>
-            <MuiTextField />
+            <ButtonAppBar/>
+            <Body/>
         </div>
     );
     }
