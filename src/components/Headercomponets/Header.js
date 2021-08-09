@@ -30,9 +30,11 @@ export default function ButtonAppBar() {
             {/* <MenuIcon /> */}
           {/* </IconButton> */}
           <Typography variant="h6" className={classes.title}>
-            News
+            Font App
           </Typography>
-          <Button color="inherit">MENU</Button>
+          <Button variant="contained" >MENU</Button>
+          <Button variant="contained" >MENU</Button>
+          <Button variant="contained" >MENU</Button>
         </Toolbar>
       </AppBar>
     </div>
