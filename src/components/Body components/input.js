@@ -3,6 +3,8 @@ import { makeStyles, withTheme } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
 import FontSize from './FontSize';
 import Align from './align';
+import FontLine from './FontLine';
+import FontType from './FontType';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -30,6 +32,10 @@ export default function MuiTextField(props) {
 
   const [align,setAlign] = useState('left');
 
+  const [line,setLine] = useState(500);
+
+  const [font,setFont] = useState('ScrumFontLine-Bold');
+
   return (
     <form className={classes.root} noValidate autoComplete="off">
       <div>
@@ -37,15 +43,17 @@ export default function MuiTextField(props) {
           id="outlined-multiline-static"
           // label="Multiline"
           multiline
-          rows={40}
+          rows={10}
           variant="outlined"
-          label ="文字を入力してください"
-          inputProps={{style: {fontSize:count,color:color,textAlign:align}}}
-          InputLabelProps={{style: {fontSize: count}}}
+          // label ="文字を入力してください"
+          inputProps={{style: {fontSize:count,color:color,textAlign:align,fontWeight:line,fontFamily:font}}}
+          // InputLabelProps={{style: {fontSize: count}}}
           
           />
         <FontSize setCount={setCount} setColor={setColor}/>
         <Align setAlign={setAlign}/>
+        <FontLine setLine={setLine}/>
+        <FontType setFont={setFont}/>
       </div>
     </form>
        );
