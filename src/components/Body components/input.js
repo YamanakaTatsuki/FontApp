@@ -46,8 +46,9 @@ export default function MuiTextField(props) {
           rows={10}
           variant="outlined"
           // label ="文字を入力してください"
-          inputProps={{style: {fontSize:count,color:color,textAlign:align,fontWeight:line,fontFamily:font}}}
+          inputProps={{style: {fontSize:count,color:color,textAlign:align,fontWeight:line,fontFamily:font,lineHeight:1.5}}}
           // InputLabelProps={{style: {fontSize: count}}}
+          
           
           />
         <FontSize setCount={setCount} setColor={setColor}/>

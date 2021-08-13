@@ -6,7 +6,7 @@ const App=(props)=>{
 
     return(
         <div>
-            <ButtonAppBar/>
+            <ButtonAppBar />
             <Body/>
         </div>
     );
