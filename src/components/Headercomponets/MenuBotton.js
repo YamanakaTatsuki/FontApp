@@ -7,8 +7,6 @@ import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import Button from '@material-ui/core/Button';
-import FontSize from '/Users/yamanakatatsuki/FontApp/src/components/Body components/FontSize.js';
-import MuiTextField from '/Users/yamanakatatsuki/FontApp/src/components/Body components/input.js';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -84,7 +82,7 @@ export default function ScrollableTabsButtonAuto(props) {
         </Tabs>
       </AppBar>
       <TabPanel value={value} index={0} style={{backgroundColor:'gray',hight:100}}>
-        <FontSize/>
+        aiueo
       </TabPanel>
       <TabPanel value={value} index={1}>
         Item Two
@@ -93,7 +91,7 @@ export default function ScrollableTabsButtonAuto(props) {
         Item Three
       </TabPanel>
       <TabPanel value={value} index={3}>
-        Item Four
+        Item 
       </TabPanel>
       <TabPanel value={value} index={4}>
         Item Five
