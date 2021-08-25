@@ -6,7 +6,6 @@ import Align from './align';
 import FontLine from './FontLine';
 import FontType from './FontType';
 
-
 const useStyles = makeStyles((theme) => ({
   root: {
     '& .MuiTextField-root': {
@@ -30,9 +29,9 @@ export default function MuiTextField(props) {
 
   const [color,setColor] = useState('black');
 
-  const [align,setAlign] = useState('left');
+  const [align,setAlign] = useState('center');
 
-  const [line,setLine] = useState(500);
+  const [line,setLine] = useState("fontWeightMedium");
 
   const [font,setFont] = useState('ScrumFontLine-Bold');
 
@@ -41,16 +40,14 @@ export default function MuiTextField(props) {
       <div>
         <TextField
           id="outlined-multiline-static"
-          // label="Multiline"
           multiline
           rows={10}
           variant="outlined"
           // label ="文字を入力してください"
+          defaultValue="Hello!! My name is Tatsuki Yamanaka."
           inputProps={{style: {fontSize:count,color:color,textAlign:align,fontWeight:line,fontFamily:font,lineHeight:1.5}}}
           // InputLabelProps={{style: {fontSize: count}}}
-          
-          
-          />
+        />
         <FontSize setCount={setCount} setColor={setColor}/>
         <Align setAlign={setAlign}/>
         <FontLine setLine={setLine}/>
