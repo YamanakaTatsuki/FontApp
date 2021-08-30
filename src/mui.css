@@ -1,4 +1,5 @@
 .sampleFont {
-  color: #999;
-  font-family: 'Hoefler Text', Georgia, serif;
-}
+    color:black;
+    font-family: 'ScrumFontLine-Bold', Georgia, serif;
+    font-size: 28px;
+  } 

@@ -1,7 +1,8 @@
 import React from 'react';
 import Body from './components/Body components/body';
-import Header from './components/Headercomponets/Header';
-import MUIRichTextEditor from './rich-text-editor';
+import Header from '/Users/yamanakatatsuki/FontApp/src/components/Headercomponets/Header.js';
+import RichTextEditor from './rich-text-editor';
+
 
 const App=(props)=>{
 
@@ -9,7 +10,7 @@ const App=(props)=>{
         <div>
             <Header />
             <Body/>
-            <MUIRichTextEditor/>
+            <RichTextEditor/>
         </div>
     );
     }
