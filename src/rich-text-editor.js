@@ -1,21 +1,35 @@
 import MUIRichTextEditor from 'mui-rte'
 import DoneIcon from '@material-ui/icons/Done'
 import { EditorState } from 'draft-js'
+import './mui.css';
 
-<MUIRichTextEditor 
-    controls={["my-callback"]}
-    customControls={[
-        {
-            name: "my-callback",
-            icon: <DoneIcon />,
-            type: "callback",
-            onClick: (editorState, name, anchor) => {
-                console.log(`Clicked ${name} control`)
-                return EditorState.createEmpty()
-            }
+export default function RichTextEditor() {
+
+    function myBlockStyleFn(contentBlock) {
+        const type = contentBlock.getType();
+        console.log(type)
+        if (type === 'unstyled') {
+            return 'sampleFont';
         }
-    ]}
-/>
+    }
 
+    const style = {
+        fontSize:36,
+        fontFamily:'ScrumFontLine-Bold'
+    }
 
-export default MUIRichTextEditor;
+    return (
+        <MUIRichTextEditor
+            controls={["title", "bold", "italic", "underline", "strikethrough", "highlight", "undo", "redo", "numberList", "bulletList", "quote", "code", "clear"]}
+            customControls={[
+                {
+                    name:'title',
+                    type:'inline',
+                    inlineStyle:{style}
+                }
+            ]}
+            draftEditorProps={
+                {
+                    blockStyleFn:  myBlockStyleFn,
+                }}/>
+    );}
